@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <!--  <bean id="triangle" class="com.sam.Triangle" name="another_ref_for_triangle">
+        <property name="points">
+            <list>
+                <ref bean="pointA"/>
+                <ref bean="pointB"/>
+                <ref bean="pointC"/>
+            </list> 
+        </property>
+    </bean>-->
+
+    <bean id="pointB"  class="com.sam.Point">
+        <property name="x" value="5"/>
+        <property name="y" value="5"/>
+    </bean>
+                                                                 
+    <bean id="pointC" class="com.sam.Point">
+        <property name="x" value="5"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="pointA" class="com.sam.Point" scope="prototype" >
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+                                                                
+    <bean id="parentbean" class="com.sam.Triangle">
+        <property name="a" ref="pointA"/>
+    </bean>
+
+    <bean id="triangle1" class="com.sam.Triangle" parent="parentbean">
+        <property name="b" ref="pointB"/>
+        <property name="c" ref="pointC"/>
+    </bean>
+</beans>
