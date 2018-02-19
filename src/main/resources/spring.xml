@@ -35,4 +35,6 @@
 
     <bean id="triangle1" class="com.sam.Triangle" parent="parentbean" scope="prototype">
     </bean>
+
+    <bean class="com.sam.DisplayNameBeanProcessor"/>
 </beans>
