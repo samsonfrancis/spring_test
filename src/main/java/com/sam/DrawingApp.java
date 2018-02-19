@@ -13,7 +13,5 @@ public class DrawingApp {
         BeanFactory beanFactory = context;
         Triangle triangle = (Triangle) beanFactory.getBean("triangle1");
         triangle.draw();
-        triangle = (Triangle) beanFactory.getBean("triangle1");
-        triangle.draw();
     }
 }
