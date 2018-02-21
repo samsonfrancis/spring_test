@@ -37,7 +37,7 @@
     </bean>
 
    <bean id="circle" class="com.sam.Circle" >
-       <property name="center" ref="pointA"/>
+       <!--<property name="center" ref="pointA"/>-->
     </bean>
 
     <bean class="com.sam.MyBeanFactoryPostProcessor"/>
@@ -45,4 +45,7 @@
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations" value="src/main/resources/points.properties"/>
     </bean>
+
+    <!--Tell spring to check if the properties are set after the bean initialization (before program execution)-->
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 </beans>

@@ -21,4 +21,6 @@ public void postProcessBeanFactory(ConfigurableListableBeanFactory c){}
 Used to supply the values of the bean from property file
 i.e, if you want to set the values of the from a property file
 
-
+## Set Annotatations 
+For example the @Required Annotation in the commit tells the spring the field is required which is checked before the excution of the main
+But if this is not set then the program throws NullPointerException
