@@ -11,5 +11,8 @@ BeanPostProcessor is Class which implements BeanPostProcessor Class and override
 **Note:** To implement the above add <bean class="package.TheClassThatImplementBeanPostProcessor"/> under beans.
 
 
-
+##BEAN FACTORY POST PROCESSOR
+This class is used to execute some tasks to be excuted before the bean factory initialization.
+BeanFactoryPostProcessor is Class which implements BeanFactoryPostProcessor Class and overrides the following method.
+public void postProcessBeanFactory(ConfigurableListableBeanFactory c){}
 
