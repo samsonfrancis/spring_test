@@ -13,18 +13,18 @@
     </bean>-->
     <!--<bean id="pointB"  class="com.sam.Point" init-method="myInit" destroy-method="myDestroy">--> <!--you can have custom init and destroy particularly for a bean by setting these two values-->
     <bean id="pointB"  class="com.sam.Point" >
-        <property name="x" value="5"/>
-        <property name="y" value="5"/>
+        <property name="x" value="${pointB.x}"/>
+        <property name="y" value="${pointB.y}"/>
     </bean>
                                                                  
     <bean id="pointC" class="com.sam.Point">
-        <property name="x" value="5"/>
-        <property name="y" value="0"/>
+        <property name="x" value="${pointC.x}"/>
+        <property name="y" value="${pointC.y}"/>
     </bean>
 
     <bean id="pointA" class="com.sam.Point" >
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
+        <property name="x" value="${pointA.x}"/>
+        <property name="y" value="${pointA.y}"/>
     </bean>
                                                                 
     <bean id="parentbean" class="com.sam.Triangle">
@@ -38,4 +38,7 @@
 
     <bean class="com.sam.MyBeanFactoryPostProcessor"/>
     <!--<bean class="com.sam.DisplayNameBeanProcessor"/>-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="src/main/resources/points.properties"/>
+    </bean>
 </beans>

@@ -16,3 +16,9 @@ This class is used to execute some tasks to be excuted before the bean factory i
 BeanFactoryPostProcessor is Class which implements BeanFactoryPostProcessor Class and overrides the following method.
 public void postProcessBeanFactory(ConfigurableListableBeanFactory c){}
 
+
+##PROPERTYPLACEHOLDERCONFIGURER
+Used to supply the values of the bean from property file
+i.e, if you want to set the values of the from a property file
+
+
