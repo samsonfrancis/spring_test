@@ -33,7 +33,11 @@
         <property name="c" ref="pointC"/>
     </bean>
 
-    <bean id="triangle1" class="com.sam.Triangle" parent="parentbean" scope="prototype">
+    <bean id="triangle" class="com.sam.Triangle" parent="parentbean" scope="prototype">
+    </bean>
+
+   <bean id="circle" class="com.sam.Circle" >
+       <property name="center" ref="pointA"/>
     </bean>
 
     <bean class="com.sam.MyBeanFactoryPostProcessor"/>
